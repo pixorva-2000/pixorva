@@ -1,26 +1,15 @@
-@import "tailwindcss";
+/* This file is at app/globals.css */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/*
+  These three lines are all you need.
+  They import the "engine" of Tailwind CSS.
+  We have removed all the default Next.js demo styles
+  that were causing the black/white background issue.
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
+/* We can add simple, global body styles here if needed,
+  but we will do it in layout.jsx for more control.
+*/
